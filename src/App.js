@@ -8,7 +8,7 @@ import bck from './assets/bck.jpg'
 const App = () => {
   return (
     <Router>
-      <div className='bg-black min-[320px]:h-full sm:w-screen sm:h-screen lg:h-full'>
+      <div className='bg-black min-[320px]:h-full sm:w-full sm:h-screen lg:h-screen lg:w-full'>
       <div className='flex justify-center content-center pt-4 '>
       <img src={starx91} className='w-28 h-8 px-5 bg-white rounded-full'/>
       </div>

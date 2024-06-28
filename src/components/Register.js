@@ -10,7 +10,7 @@ import bck from "../assets/bck.jpg"
 
 const Register = () => {
   return (
-    <div className='bg-black min-[320px]:h-full sm:w-screen sm:h-screen lg:h-full'>
+    <div className='container-lg bg-black w-full'>
       {/* <div className='flex justify-center content-center pt-4 '>
       <img src={starx91} className='w-28 h-8 px-5 bg-white rounded-full'/>
       </div> */}
@@ -40,8 +40,8 @@ const Register = () => {
             });
         }}
       >
-        <div className='flex max-w-screen min-[320px]:flex-wrap-reverse min-[320px]:place-content-center md:flex-wrap-reverse lg:flex-nowrap '>
-          <div className='flex-row min-[320px]:px-12  sm:px-28 mt-10 mb-5'>
+        <div className='container flex max-w-screen min-[320px]:flex-wrap-reverse min-[320px]:place-content-center md:flex-wrap-reverse lg:flex-nowrap '>
+          <div className='flex-row min-[320px]:px-12  sm:px-28 mt-10 mb-5 '>
             <h1 className='text-white text-2xl font-bold'>Get Started.</h1>
             <h2 className='text-white'>Fly Smarter. Start Planning.</h2>
             <button className=' flex min-[320px]:px-12 py-2  jusitfy-center rounded-lg my-3 min-[320px]:h-11 md:w-48 lg:w-72 border-solid border-2 border-zinc-800  hover:bg-zinc-900 hover:text-white gap-2'>
@@ -72,7 +72,7 @@ const Register = () => {
                 <ErrorMessage name="password" />
 
                 <div className='flex gap-1'>
-                  <input type='checkbox' className='px-2 py-2 bg-green-300'></input>
+                  <input type='checkbox' className='px-2 py-2 '></input>
                   <h1 className='text-zinc-500 text-sm'>Remember me.</h1>
                 </div>
 
@@ -84,8 +84,8 @@ const Register = () => {
                 <Link to="/login" className='text-white'>Login</Link>
               </div>
           </div>
-          <div className='flex place-content-center'>
-            <img src={bck} className='w-fit h-fit'/>
+          <div className='flex place-content-center w-7/12 p-5'>
+            <img src={bck} className='lg:w-full h-5/12'/>
           </div>
         </div>
       </Formik>
