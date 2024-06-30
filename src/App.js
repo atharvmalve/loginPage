@@ -4,6 +4,7 @@ import Register from './components/Register';
 import Login from './components/Login';
 import starx91 from './assets/starx91.png'
 import bck from './assets/bck.jpg'
+import ForgotPassPage from './components/ForgotPassPage';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassPage />} />
         </Routes>
       </div>
     </Router>

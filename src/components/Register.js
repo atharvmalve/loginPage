@@ -84,7 +84,7 @@ const Register = () => {
                 <Link to="/login" className='text-white'>Login</Link>
               </div>
           </div>
-          <div className='flex place-content-center w-7/12 p-5'>
+          <div className='flex place-content-center w-7/12 p-5npm'>
             <img src={bck} className='lg:w-full h-5/12'/>
           </div>
         </div>

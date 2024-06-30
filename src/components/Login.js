@@ -1,14 +1,20 @@
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field, ErrorMessage,  } from 'formik';
+import {Link, useNavigate } from 'react-router-dom';
+import ForgotPassBut from './ForgotPassBut';
 import * as Yup from 'yup';
 import axios from 'axios';
 import apple from '../assets/apple.png'
 import google from '../assets/google.png'
 import bck from "../assets/bck.jpg"
 
+
 const Login = () => {
+  const navigate=useNavigate();
   return (
-    <div className='bg-black min-[320px]:h-full sm:w-screen sm:h-screen lg:h-full lg:w-screen'>
+    // <div className='bg-black min-[320px]:h-full sm:w-screen sm:h-screen lg:h-full lg:w-screen'>
+    <div className='container-lg bg-black w-full'>
+
       {/* <h2>Login</h2> */}
       <Formik
         initialValues={{ username: '', password: '' }}
@@ -32,7 +38,9 @@ const Login = () => {
             });
         }}
       >
-        <div className='flex max-w-screen min-[320px]:flex-wrap-reverse min-[320px]:place-content-center md:flex-wrap-reverse lg:flex-nowrap '>
+        {/* <div className='flex max-w-screen min-[320px]:flex-wrap-reverse min-[320px]:place-content-center md:flex-wrap-reverse lg:flex-nowrap '> */}
+        <div className='container flex max-w-screen min-[320px]:flex-wrap-reverse min-[320px]:place-content-center md:flex-wrap-reverse lg:flex-nowrap '>
+
         <div className='flex-row min-[320px]:px-12  sm:px-28 mt-10 mb-5'>
           <h1 className='text-white text-2xl font-bold'>Welcome Back!</h1>
           <h2 className='text-white'>Your flights await. Log in and take off.</h2>
@@ -65,7 +73,8 @@ const Login = () => {
                 <h1 className='text-zinc-500'>Remember me.</h1>
             </div>
             <div>
-                  <button className='text-white text-sm '>Forgot Password?</button>
+                  {/* <button className='text-white text-sm '>Forgot Password?</button> */}
+                  <ForgotPassBut navigate={navigate}/>
             </div>
           </div>
 
@@ -73,9 +82,9 @@ const Login = () => {
           </div>
         </Form>
         </div>
-        <div className='flex place-content-center'>
-          <img src={bck} className='w-fit h-fit'/>
-        </div>
+        <div className='flex place-content-center w-7/12 p-5npm'>
+            <img src={bck} className='lg:w-full h-5/12'/>
+          </div>
       </div>
       </Formik>
     </div>
